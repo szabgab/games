@@ -21,8 +21,6 @@ function start() {
     let board = "";
     let color = "#" + toHex(red) + toHex(green) + toHex(blue);
     console.log(color);
-    //document.getElementById('board').innerHTML = board;
-    //document.body.style.background = color;
     document.getElementById("left").style.background = color;
     setColor();
 }
@@ -41,6 +39,7 @@ function setup() {
     var buttons = document.getElementsByClassName('colors');
     for (var i=0; i < buttons.length; i++) {
         buttons[i].addEventListener('change', setColor);
+        buttons[i].value = 255;
     };
 
 }

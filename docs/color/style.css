@@ -1,9 +1,29 @@
 body {
     margin: 0;
+    height: 100%;
 }
+html {
+    height: 100%;
+}
+
+#board {
+    height: 100%;
+}
+
+#redsquare {
+    background-color: #FF0000;
+}
+#greensquare {
+    background-color: #00FF00;
+}
+#bluesquare {
+    background-color: #0000FF;
+}
+
 .column {
     float: left;
     width: 50%;
+    height: 100%;
 }
   
 /* Clear floats after the columns */
