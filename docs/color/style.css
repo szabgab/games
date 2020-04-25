@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+  
+/* Clear floats after the columns */
+#board:after {
+    content: "";
+    display: table;
+    clear: both;
+}
