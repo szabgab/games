@@ -1,18 +1,32 @@
+"use strict";
+
 function start() {
-    console.log("start")
+    console.log("start");
     let width = 3;
     let height = 4;
-    console.log("Height: ", height) 
-    console.log("Width: ", width) 
+    console.log("Height: ", height); 
+    console.log("Width: ", width); 
     let board = "<table>";
+    let status = new Array();
 
-    for (h=0; h < height; h++) {
-        let row = "<tr>";
-        for (w=0; w < width; w++) {
-            let btnId = h + "-" + w;
-            row += '<td><button class="boardBtn" id="' + btnId + '">1</button></td>';
+    for (let h=0; h < height; h++) {
+        let row = new Array();
+        for (let w=0; w < width; w++) {
+            row.push("no")
         }
-        row += "</tr>\n";
+        status.push(row);
+    }
+    status[0][0] = "user";
+    status[height-1][width-1] = "comp";
+
+
+    for (let h=0; h < height; h++) {
+        let row = '<tr>';
+        for (let w=0; w < width; w++) {
+            let btnId = h + '-' + w;
+            row += '<td><button class="boardBtn" id="' + btnId + '">' + status[h][w] + '</button></td>';
+        }
+        row += '</tr>\n';
         board += row;
     }
     document.getElementById('board').innerHTML = board;
