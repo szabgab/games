@@ -9,12 +9,23 @@
 <body>
 <div id="board">
     <div id="left" class="column">
-        <h1>Games</h2>
-        <button id="start">Start</button>
+        <h1>Color Selector</h1>
+            <div id="whichcolor">
+                <span class="redsquare">&nbsp&nbsp&nbsp</span> <input id="use-red"  type="checkbox" checked>
+                <span class="greensquare">&nbsp&nbsp&nbsp</span> <input id="use-green"  type="checkbox" checked>
+                <span class="bluesquare">&nbsp&nbsp&nbsp</span> <input id="use-blue"  type="checkbox" checked>
+                <p></p>
+                <button id="start">Start</button>
+                <button id="show">Show</button>
+                <div id="hidden-color"></div>
+            </div>
+        
         <div id="rules">
             <ul>
-                <li>The computer randomly generates a color (RGB value) and the user must guess.</li>
-                <li>TODO: allow the user to limit which color to be randomized (r, g, or b). The other are fixed to 0</li>
+                <li>When you click "start" the computer will randomly generate a color (RGB value) using the colors you selected above.</li>
+                <li>The other colors are fixed to 0.</li>
+                <li>Then you can guess the color.</li>
+                <li>TODO: set background color of text message so they will be seen even if our color is black</li>
                 <li>TODO: instead of typing in the number have a slider.</li>
                 <li>TODO: show a color selector to make it easier to select.</li>
                 <li>TODO: show the distance of the guess from the real color.</li>
@@ -22,9 +33,11 @@
         </div>
     </div>
     <div id="right" class="column">
-        <span id="redsquare">&nbsp&nbsp&nbsp</span> <input id="red" class="colors" type="number" value="255">
-        <span id="greensquare">&nbsp&nbsp&nbsp</span> <input id="green" class="colors" type="number" value="255">
-        <span id="bluesquare">&nbsp&nbsp&nbsp</span> <input id="blue" class="colors" type="number" value="255">
+        <span class="redsquare">&nbsp&nbsp&nbsp</span> <input id="red" class="colors" type="number" value="255">
+        <span class="greensquare">&nbsp&nbsp&nbsp</span> <input id="green" class="colors" type="number" value="255">
+        <span class="bluesquare">&nbsp&nbsp&nbsp</span> <input id="blue" class="colors" type="number" value="255">
+        <div id="selected-color"></div>
+        <div id="match"></div>
     </div>
 </div>
 

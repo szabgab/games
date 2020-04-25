@@ -10,16 +10,22 @@ html {
     height: 100%;
 }
 
-#redsquare {
+.redsquare {
     background-color: #FF0000;
 }
-#greensquare {
+.greensquare {
     background-color: #00FF00;
 }
-#bluesquare {
+.bluesquare {
     background-color: #0000FF;
 }
 
+h1 {
+    text-align: center;
+}
+#whichcolor {
+    text-align: center;
+}
 .column {
     float: left;
     width: 50%;
